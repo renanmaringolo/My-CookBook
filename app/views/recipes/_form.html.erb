@@ -33,5 +33,13 @@
     <%= f.label :cook_method, 'Como Preparar' %>
     <%= f.text_area :cook_method, class: 'form-control', row: '3' %>
   </div>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
+
+
   <%= f.submit 'Enviar', class: 'btn btn-primary' %>
 <% end %>
