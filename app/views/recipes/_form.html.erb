@@ -34,12 +34,11 @@
     <%= f.text_area :cook_method, class: 'form-control', row: '3' %>
   </div>
 
-  <div class="field">
-    <%= f.label :photo_recipe %>
-    <%= f.file_field :photo_recipe %>
+  <div class="form-group">
+    <%= f.label :photo, 'Foto' %>
+    <%= f.file_field :photo %>
   </div>
 
-
-
+    
   <%= f.submit 'Enviar', class: 'btn btn-primary' %>
 <% end %>
