@@ -39,5 +39,6 @@
 
 <% if user_signed_in? && @recipe.user == current_user %>
   <%= link_to 'Editar', edit_recipe_path(@recipe), class: 'btn btn-info' %>
+  <%= link_to 'Excluir', recipe_path(@recipe), method: :delete, class: 'btn btn-info' %>
   <% end %>
 <%= link_to 'Voltar', root_path, class: 'btn btn-secondary' %>

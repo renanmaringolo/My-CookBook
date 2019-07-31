@@ -36,6 +36,12 @@ class RecipesController < ApplicationController
     render :edit
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to root_path
+  end
+
   def search
     @recipes = Recipe.where("title LIKE ? ", "%#{params[:search]}%")
   end
