@@ -3,7 +3,7 @@ class RecipesMailer < ApplicationMailer
       @recipe = Recipe.find(recipe_id)
       @author = author
       @message = message
-      mail(to: to, subject: message)
+      mail(to: to, subject: message).deliver
   
     end
   end
